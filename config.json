@@ -12,9 +12,23 @@
         ]
       },
       "streamSettings": {
-        "network": "ws",
-        "wsSettings": {
-          "path": "/$WS_PATH"
+        "network": "tcp",
+        "tcpSettings": {
+          "acceptProxyProtocol": false,
+          "header": {
+            "type": "http",
+            "request": {
+              "method": "GET",
+              "path": ["/$HTTP_PATH"],
+              "headers": {}
+            },
+            "response": {
+              "version": "1.1",
+              "status": "200",
+              "reason": "OK",
+              "headers": {}
+            }
+          }
         }
       }
     }
